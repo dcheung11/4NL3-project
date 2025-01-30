@@ -1,0 +1,20 @@
+Source: "You people are ruining this country with your beliefs!" 
+Classification: Identity Attack
+
+Source: "If I ever see you in public again, you’re going to regret it."
+Classification: Threat
+
+Source: "You're an absolute waste of life and shouldn't exist!" 
+Classification: Severe Toxicity
+
+Source: (Any curse word)
+Classification: Profanity
+
+Source: “You suck at that”
+Classification: Toxicity
+
+Source: “You’re really ugly”
+Classification: Insult
+
+Source: “Great weather today”
+Classification: Non-Toxic
