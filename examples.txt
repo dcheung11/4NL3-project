@@ -1,20 +1,27 @@
 Source: "You people are ruining this country with your beliefs!" 
 Classification: Identity Attack
+Explanation: This tweet targets a specific group or collective identity ("you people" likely refers to race, religion, gender, etc.) based on their characteristics (beliefs), which is a sign of an identity attack. 
 
 Source: "If I ever see you in public again, you’re going to regret it."
 Classification: Threat
+Explanation: This tweet explicitly implies attack, harm, or negative consequences (likely physical or emotional harm) if the target is encountered "in public again", which qualifies it as a threat.
 
 Source: "You're an absolute waste of life and shouldn't exist!" 
 Classification: Severe Toxicity
+Explanation: This statement is highly dehumanizing and expresses extreme hatred, which qualifies it as severe toxicity. 
 
 Source: (Any curse word)
 Classification: Profanity
+Explanation: Curse words are classified as profanity because they are vulgar or offensive. They are not classified as Toxicity or Insult unless they are directed at someone in a harmful or demeaning way. 
 
 Source: “You suck at that”
 Classification: Toxicity
+Explanation: This statement is demeaning and negative, which qualifies it as toxic. It is not Severe Toxicity because it lacks extreme hatred or dehumanization.
 
 Source: “You’re really ugly”
 Classification: Insult
+Explanation: This statement directly attacks the recipient’s appearance, which qualifies it as an insult.
 
 Source: “Great weather today”
 Classification: Non-Toxic
+Explanations: This tweet is Non-Toxic, as it contains no harmful, offensive, or negative intent.
