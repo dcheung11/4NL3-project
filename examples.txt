@@ -25,3 +25,8 @@ Explanation: This statement directly attacks the recipient’s appearance, which
 Source: “Great weather today”
 Classification: Non-Toxic
 Explanations: This tweet is Non-Toxic, as it contains no harmful, offensive, or negative intent.
+
+Source: "Go f*** yourself, you useless idiot!"
+Classification: Profanity, Severe Toxicity, Insult
+Explanation: The statement includes a curse word, qualifying it as profanity. It also expresses extreme hatred and dehumanization ("useless idiot"), making it severe toxicity, and directly insults the recipient.
+
