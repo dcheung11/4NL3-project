@@ -46,7 +46,7 @@ def split_data_frame_into_files(duplicated_rows, split_dfs, n_duplicate, custom_
 
             split_dfs[i] = split_dfs[i].to_frame(name="tweet")
             final_split = pd.concat([custom_header, split_dfs[i]], ignore_index=True)
-            final_split.to_csv(f"dataset/tweets_data_{i+1}.csv", index=False, header=False, encoding="utf-8", quoting=1)
+        final_split.to_csv(f"dataset/tweets_data_{i+1}.csv", index=False, header=False, encoding="utf-8", quoting=1)
 
 
 
@@ -74,11 +74,11 @@ split_dfs = np.array_split(remaining_dataset, TOTAL_SPLITS)
 
 custom_header = pd.DataFrame([[
     "Tweets To Be Annotated",  # Tweet column (adjust if needed)
-    "Non-Toxic", "Toxicity", "Severe Toxicity", "Identity Attack", "Insult", "Profanity", "Threat"  # Separate columns
+    "Non_Toxic", "Toxicity", "Severe_Toxicity", "Identity_Attack", "Insult", "Profanity", "Threat" , "Sexually_Explicit" # Separate columns
   ]])
 
 # (adjust if needed)
-custom_header.columns = ["tweet", "Non-Toxic", "Toxicity", "Severe Toxicity", "Identity Attack", "Insult", "Profanity", "Threat"]
+custom_header.columns = ["tweet", "Non-Toxic", "Toxicity", "Severe Toxicity", "Identity Attack", "Insult", "Profanity", "Threat", "Sexually Explicit"]
 
 split_data_frame_into_files(duplicated_rows=duplicated_rows,
                             split_dfs= split_dfs,
