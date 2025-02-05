@@ -26,7 +26,19 @@ Source: “Great weather today”
 Classification: Non-Toxic
 Explanations: This tweet is Non-Toxic, as it contains no harmful, offensive, or negative intent.
 
+Source: "I want to touch you inappropriately."
+Classification: Sexually Explicit
+Explanation: The statement contains sexually suggestive content, qualifying it as sexually explicit. 
+
 Source: "Go f*** yourself, you useless idiot!"
 Classification: Profanity, Severe Toxicity, Insult
 Explanation: The statement includes a curse word, qualifying it as profanity. It also expresses extreme hatred and dehumanization ("useless idiot"), making it severe toxicity, and directly insults the recipient.
 
+Source: "You're a pathetic excuse for a human being and deserve to be miserable!"
+Classification: Severe Toxicity, Insult
+Explanation: The statement is highly dehumanizing and expresses extreme hatred ("pathetic excuse for a human being"), qualifying it as severe toxicity. It also directly insults the recipient, making it an insult.
+
+
+Source: "I want to f*** you so hard, you dirty little slut."
+Classification: Sexually Explicit, Profanity, Insult
+Explanation: The statement contains explicit sexual content, qualifying it as sexually explicit. It includes vulgar language ("f***"), making it profanity. It uses demeaning and offensive language, which qualifies it as an insult.
