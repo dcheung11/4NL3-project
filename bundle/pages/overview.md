@@ -1,6 +1,6 @@
 # Toxic Tweets Benchmark
 
-Toxicity Classification NLP Project Group 5 (Jackson Lip)
+Toxicity Classification NLP Project Group 5 (Jackson Lippert - Emma Wigglesworth - Damien Cheung - Evan Placenis)
 
 Toxic Tweets is a benchmark for models designed to classify toxicity in tweets. 
 This benchmark is a single-phase evaluation.

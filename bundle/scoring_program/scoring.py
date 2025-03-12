@@ -5,7 +5,7 @@ import io
 import base64
 import numpy as np
 import pandas as pd
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score
 
 # Paths
 input_dir = '/app/input'  # Input from ingestion program
@@ -30,13 +30,14 @@ def get_data():
     # Load predictions
     y_pred = np.genfromtxt(os.path.join(prediction_dir, 'predictions.csv'), delimiter=',')
     return y_test, y_pred
+
 def print_bar():
     """Display a bar ('----------')."""
     print('-' * 10)
 
-def make_figure(accuracy):
+def make_figure(accuracy, f1):
     fig, ax = plt.subplots()
-    ax.bar(['Accuracy'], [accuracy])
+    ax.bar(['Accuracy', 'F1 Score'], [accuracy, f1])
     ax.set_ylabel('Score')
     ax.set_title('Submission Results')
     return fig
@@ -58,17 +59,19 @@ def main():
     print_bar()
     print('Reading prediction')
     y_test, y_pred = get_data()
-    # Compute score
+    # Compute scores
     accuracy = accuracy_score(y_test, y_pred)
-    print('Accuracy: {}'.format(accuracy))
+    f1 = f1_score(y_test, y_pred, average='weighted')  # Use weighted F1 for multi-label
+    print(f'Accuracy: {accuracy}')
+    print(f'F1 Score: {f1}')
     # Write scores
     print_bar()
     print('Scoring program finished. Writing scores.')
-    scores = {'accuracy': accuracy}
+    scores = {'accuracy': accuracy, 'f1_score': f1}
     print(scores)
     write_file(score_file, json.dumps(scores))
     # Create a figure for detailed results
-    figure = fig_to_b64(make_figure(accuracy))
+    figure = fig_to_b64(make_figure(accuracy, f1))
     write_file(html_file, f'<img src="data:image/png;base64,{figure}">')
 
 if __name__ == '__main__':
