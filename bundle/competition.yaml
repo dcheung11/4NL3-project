@@ -28,17 +28,6 @@ tasks:
   reference_data: feedback_phase/reference_data # Reference data is the ground truth (y)
   scoring_program: scoring_program              # The scoring program compares predictions and ground truth
   ingestion_program: ingestion_program          # The ingestion program takes a code submission and generates predictions
-- index: 1
-  name: Final Task
-  description: 'Final phase: submissions from the previous phase are automatically
-    cloned and used to compute the final score. The results on the test set will be
-    revealed when the organizers make them available.'
-  is_public: false
-  input_data: final_phase/input_data
-  reference_data: final_phase/reference_data
-  scoring_program: scoring_program
-  ingestion_program: ingestion_program
-solutions: []
 
 # Sample code submission
 # /!\ Solution is an example submission, NOT the ground truth /!\
@@ -46,11 +35,9 @@ solutions:
   - index: 0
     tasks:
     - 0
-    - 1
     path: solution/
 
-# There are 2 phases: development phase and final phase
-# Each one is linked to a task
+# There is only one phase: development phase
 phases:
 - index: 0
   name: Development
@@ -66,18 +53,6 @@ phases:
   solutions: []
   starting_kit: starting_kit
   public_data: feedback_phase/input_data
-- index: 1
-  name: Final
-  description: 'Final phase: submissions from the previous phase are automatically
-    cloned and used to compute the final score. The results on the test set will be
-    revealed when the organizers make them available.'
-  start: 2-1-2026 # Never ends
-  max_submissions_per_day: 0
-  max_submissions: 0
-  execution_time_limit: 600
-  tasks:
-  - 1
-  solutions: []
 
 # Fact sheets to add more information in the leaderboard
 fact_sheet: {
@@ -98,33 +73,15 @@ leaderboards:
   key: Results
   submission_rule: "Force_Last"
   columns:
-      - title: Average Accuracy
-        key: avg_accuracy
+      - title: Accuracy
+        key: accuracy
         index: 0
         sorting: desc
-        computation: avg
-        computation_indexes:
-          - 1
-          - 2
-          - 3
-          - 4
-      - title: Dataset 1
-        key: dataset1
+      - title: F1 Score
+        key: f1_score
         index: 1
-        sorting: desc
-      - title: Dataset 2
-        key: dataset2
-        index: 2
-        sorting: desc
-      - title: Dataset 3
-        key: dataset3
-        index: 3
-        sorting: desc
-      - title: Dataset 4
-        key: dataset4
-        index: 4
         sorting: desc
       - title: Duration
         key: duration
-        index: 5
+        index: 2
         sorting: asc
